@@ -5,10 +5,9 @@ module.exports = function createDreamTeam(members) {
   let result = '';
 
   if(!Array.isArray(members)) return false;
-  newMembers = members.filter(el => typeof el === 'string');
-  let newMembersTrim = newMembers.map(el => el.trim().toUpperCase()).sort();
-  for (let i = 0; i < newMembersTrim.length; i++) {
-    result += newMembersTrim[i][0];
+  newMembers = members.filter(el => typeof el === 'string').map(el => el.trim().toUpperCase()).sort();
+  for (let i = 0; i < newMembers.length; i++) {
+    result += newMembers[i][0];
   }
   return result;
 };
