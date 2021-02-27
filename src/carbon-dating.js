@@ -8,7 +8,7 @@ module.exports = function dateSample(sampleActivity) {
   let result;
 
 
-  if (sampleActivity !== String || sampleActivity.length === 0) {
+  if (typeof sampleActivity !== 'string' || sampleActivity.length === 0) {
     return false;
   }
   const sampleActivityNum = parseFloat(sampleActivity);
